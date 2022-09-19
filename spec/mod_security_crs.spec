@@ -5,7 +5,7 @@ Release: 0%{?dist}
 License: ASL 2.0
 URL: https://coreruleset.org
 Group: System Environment/Daemons
-Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/3.3.3.tar.gz
+Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v3.3.3.tar.gz
 BuildArch: noarch
 Requires: mod_security >= 2.8.0
 Obsoletes: mod_security_crs-extras < 3.0.0
