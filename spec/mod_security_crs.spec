@@ -1,11 +1,12 @@
 Summary: ModSecurity Rules
 Name: mod_security_crs
-Version: 3.3.5 
+Version: 3.3.6
 Release: 0%{?dist}
 License: ASL 2.0
 URL: https://coreruleset.org
 Group: System Environment/Daemons
-Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v3.3.5.tar.gz
+#Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v3.3.5.tar.gz
+Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v%{version}.tar.gz
 BuildArch: noarch
 Requires: mod_security >= 2.9.6
 Obsoletes: mod_security_crs-extras < 3.0.0
@@ -46,6 +47,9 @@ done
 
 
 %changelog
+* Wed Aug 28 2024 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.6
+- Update to last release
+
 * Wed Nov 08 2023 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.5
 - Update to final release
 
