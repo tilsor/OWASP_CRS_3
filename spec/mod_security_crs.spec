@@ -1,10 +1,11 @@
 Summary: ModSecurity Rules
 Name: mod_security_crs
 Version: 3.3.7
-Release: 1%{?dist}
+Release: 0%{?dist}
 License: ASL 2.0
 URL: https://coreruleset.org
 Group: System Environment/Daemons
+#Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v3.3.5.tar.gz
 Source: https://github.com/coreruleset/coreruleset/archive/refs/tags/v%{version}.tar.gz
 BuildArch: noarch
 Requires: mod_security >= 2.9.6
@@ -35,8 +36,6 @@ mv crs-setup.conf.example %{buildroot}%{_sysconfdir}/httpd/modsecurity.d/crs-set
 for f in `ls %{buildroot}%{_datarootdir}/mod_modsecurity_crs/rules/` ; do
     ln -s %{_datarootdir}/mod_modsecurity_crs/rules/$f %{buildroot}%{_sysconfdir}/httpd/modsecurity.d/activated_rules/$f;
 done
-crs_version=$(echo %{version} | tr -d '.')
-sed -i "s/crs_setup_version=.*/crs_setup_version=%{crs_version}\"/g" %{buildroot}%{_sysconfdir}/httpd/modsecurity.d/crs-setup.conf
 
 %files
 %license LICENSE
@@ -47,9 +46,6 @@ sed -i "s/crs_setup_version=.*/crs_setup_version=%{crs_version}\"/g" %{buildroot
 
 
 %changelog
-* Wed Jun 25 2025 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7-1
-- Automate version change when crs-setup.conf has custom updates
-
 * Fri Nov 01 2024 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7
 - Update to last release
 
