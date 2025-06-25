@@ -47,7 +47,7 @@ sed -i "s/crs_setup_version=.*/crs_setup_version=%{crs_version}\"/g" %{buildroot
 
 
 %changelog
-* Wed Jun 251 2025 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7-1
+* Wed Jun 25 2025 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7-1
 - Automate version change when crs-setup.conf has custom updates
 
 * Fri Nov 01 2024 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7
