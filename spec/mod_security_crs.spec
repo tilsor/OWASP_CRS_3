@@ -1,6 +1,6 @@
 Summary: ModSecurity Rules
 Name: mod_security_crs
-Version: 3.3.7
+Version: 3.3.8
 Release: 0%{?dist}
 License: ASL 2.0
 URL: https://coreruleset.org
@@ -46,6 +46,9 @@ done
 
 
 %changelog
+* Wed Jan 01 2026 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.8
+- Update to last release - CVE-2026-21876
+
 * Fri Nov 01 2024 German Gonzalez <ggonzalez@tilsor.com.uy> - 3.3.7
 - Update to last release
 
